@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'posts/index'
+  get "posts/new" => "posts#new"
+
   root "home#top"
   
   get "/new" => "users#new" 
