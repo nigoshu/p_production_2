@@ -1,4 +1,10 @@
 
 <h1>新規投稿の作成画面だお</h1>
 
-<textarea></textarea>
+<%= form_tag("/posts/create") do %>
+
+    <textarea name="content"></textarea>
+
+    <input type="submit" value="投稿">
+
+<% end %>
