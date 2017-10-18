@@ -2,6 +2,7 @@
 
 <% @posts.each do |post| %>
 
-    <%= post.content %>
+    <%= link_to(post.content, "/posts/#{post.id}") %>
+    
 <% end %>
 
