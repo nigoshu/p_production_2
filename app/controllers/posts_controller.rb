@@ -35,6 +35,8 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.destroy
     
+    #とりあえず現状はindexへリダイレクト
+    redirect_to("/posts/index")
   end
   
 end
