@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       )
     if @user.save
       flash[:notice] = "登録が完了しました"
-    redirect_to("/#{@user.id}")
+    redirect_to("users/#{@user.id}")
     else
       render("/new")
     end
@@ -34,8 +34,16 @@ class UsersController < ApplicationController
       flash[:notice] = "ユーザー情報を編集しました"
       redirect_to("/users/#{@user.id}")
     else
-      render("/#{@user.id}/edit")
+      render("users/edit")
     end
   end
+  
+  def destroy
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    flash[:notice] = "ユーザーアカウントを削除しました"
+    redirect_to("/home")
+  end
+  
   
 end

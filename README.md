@@ -23,7 +23,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-=======
-# practice_production
-# ポポロ
->>>>>>> origin/master
