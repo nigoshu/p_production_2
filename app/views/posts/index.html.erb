@@ -1,11 +1,14 @@
 <div class="main">
-    
 <h1>投稿一覧だお</h1>
 
-<% @posts.each do |post| %>
-
-    <%= link_to(post.content, "/posts/#{post.id}") %>
-    
-<% end %>
-
+<section class="card">
+    <div class="card-content">
+    <h2 class="card-title">投稿のタイトル</h2>
+        <div class="card-text">
+            <% @posts.each do |post| %>
+        </div>
+                <%= link_to(post.content, "/posts/#{post.id}") %>
+            <% end %>
+    </div>
+</section>
 </div>
