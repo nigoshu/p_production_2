@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root "home#top"
   
   get "/new" => "users#new" 
-  post "/create" => "users#create"
+  post "/users/create" => "users#create"
+  get "/users/index" => "users#index"
   get "/users/:id" => "users#show"
   get "/users/:id/edit" => "users#edit"
   post "/users/:id/update" => "users#update"

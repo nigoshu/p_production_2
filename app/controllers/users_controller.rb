@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   
   #現在showアクションはTOPページのリンクからジャンプするとユーザーIDを拾えないのでエラーになります。
+
+  def index
+   @users = User.all
+  end
+
   def show
     @user = User.find_by(id: params[:id])
   end
@@ -16,7 +21,7 @@ class UsersController < ApplicationController
       )
     if @user.save
       flash[:notice] = "登録が完了しました"
-    redirect_to("users/#{@user.id}")
+    redirect_to("/users/#{@user.id}")
     else
       render("/new")
     end
