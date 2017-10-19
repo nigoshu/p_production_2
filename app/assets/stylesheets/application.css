@@ -11,6 +11,7 @@ html {
 }
 
 header {
+  position: relative;
   height: 64px;
   z-index: 1;
   width: 100%;
@@ -29,22 +30,72 @@ body{
 
 
 
-.top{
-  
+
+.top-main {
+  padding: 100px 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: auto;
-  min-height: 100%;
-  margin: 50px 40px 40px 40px;
+  height: 450px;
+  color: white;
+  background-color: #ffcc00;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url("");
+}
+
+.footer{
+    width:100%;
+    position:absolute;
+}
+
+.footer-container{
+    position:relative;
+    height:120px; 
+    background-color: #eee;
+    padding-top:55px;
+    
+}
+
+.footer-container p{
+    text-align: center;
 }
 
 
 
+/**********************
+
+aタグに関する記述
+
+***********************/
+a{
+  text-decoration: none;
+}
+a:link{
+  color:#3399cc;
+}
+
+a:visited {
+  color: #000080;
+}
+  
+a:hover {
+  color: #ff0000; 
+}
+
+a:active { 
+  color: #ff8000; 
+
+}
+
+
 .main{
- 
+  text-align: center;
   width: 100%;
   height: auto;
   min-height: 100%;
-  margin-left: 40px
 }
 
 
@@ -53,13 +104,29 @@ body{
   width:500px;
   padding:30px;
   border:solid 1px #eee;
+  display: inline-block;
+  text-align:center;
 }
 
 .form-content{
   width:500px;
   padding:50px 30px;
   border:solid 1px #eee;
+  text-align: center;
+  display: inline-block;
 }
+
+.index-content{
+  padding:30px 0; 
+  width:500px;
+  text-align: center;
+  display: inline-block;
+}
+.align-left{
+  text-align: left;
+}
+
+
 
 .form-error {
   
@@ -70,16 +137,7 @@ body{
 }
 
 
-.footer{
-    width:100%;
-    position:relative;
-    height:120px; 
-    background-color: #eee;
-}
 
-.footer p{
-    padding-top: 30px
-}
 
 
 
@@ -89,6 +147,13 @@ body{
 
 ul {
   list-style-type: none;
+}
+
+.topTitle{
+  padding: 10px 20px;
+  float:left;
+  font-size:20px;
+  font-weight:700;
 }
 
 .header-menus {
@@ -125,9 +190,7 @@ p , input {
 
 
 .userIndex {
-     width:500px;
-     padding:10px 20px;
-     margin:0 0 0 20px;
+     padding:10px 0;
      border:solid 1px #eee;
 
 }
