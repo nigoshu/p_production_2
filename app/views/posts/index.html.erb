@@ -1,2 +1,8 @@
 <h1>投稿一覧だお</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<% @posts.each do |post| %>
+
+    <%= link_to(post.content, "/posts/#{post.id}") %>
+    
+<% end %>
+
