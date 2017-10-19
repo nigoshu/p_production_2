@@ -1,6 +1,6 @@
 <div class="main">
-<h1>ユーザー登録画面</h1>
-    <%= form_tag("/users/create") do%>
+<h1>ログイン</h1>
+    <%= form_tag("/users/login") do%>
     <div class="form-content">
       <p>名前</p>
       <input name="name">
@@ -8,7 +8,7 @@
       <input name="email">
       <p>パスワード</p>
       <input name="password">
-      <input type="submit" value="新規登録">
+      <input type="submit" value="ログイン">
     </div>
     <% end %>
 </div>
