@@ -13,14 +13,23 @@
             <%= link_to("top", "/") %>
          </li>
          <li>
-            <%= link_to("マイページ", "/show") %>
+            <%= link_to("マイページ", "/users/show/#{params[:id]}") %>
          </li>
          <li>
-            <%= link_to("新規登録", "/new") %>
+            <%= link_to("新規登録", "users/new") %>
+         </li>
+          <li>
+            <%= link_to("ユーザー一覧", "/users/index") %>
+         </li>
+         <li>
+            <%= link_to("新規投稿", "/posts/new") %>
+         </li>
+         <li>
+            <%= link_to("投稿一覧", "/posts/index") %>
          </li>
       </ul>
     </header>
-
+    
      　<% if flash[:notice] %>
        <div class="flash">
          <%= flash[:notice] %>

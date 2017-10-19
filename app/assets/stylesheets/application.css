@@ -1,15 +1,101 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+*{
+  padding:0;
+  margin:0;
+}
+
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+header {
+  height: 64px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  border-bottom: solid 1px #eee;
+}
+body{
+    
+}
+
+.main{
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin-left: 40px
+}
+
+.main-mypage{
+  position: relative;
+  width:500px;
+  padding:30px;
+  border:solid 1px #eee;
+}
+
+
+
+
+
+
+/******************************
+ヘッダーメニューに関する記述
+*******************************/
+
+ul {
+  list-style-type: none;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 20px;
+}
+
+.header-menus li {
+  float: left;
+  line-height: 64px;
+  font-size: 13px;
+  padding-left: 15px;
+}
+
+.header-menus a {
+  float: left;
+  font-size: 13px;
+  color: navy;
+}
+
+
+
+/******************************
+inputやpタグなどに関する記述
+*******************************/
+
+h1, h2, h3, h4, h5{
+    margin:20px;
+}
+
+p , input {
+    margin-left:20px;
+}
+
+
+.userIndex {
+     width:500px;
+     padding:10px 20px;
+     margin:0 0 0 20px;
+     border:solid 1px #eee;
+
+}
+
+.flash{
+  position: absolute;
+  width:100%;
+  top: 65px;
+  padding:10px 40px;
+  background-color:#cce1ff;
+
+}

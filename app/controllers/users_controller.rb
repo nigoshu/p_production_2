@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
-    @user.emal = params[:email]
+    @user.email = params[:email]
     if @user.save
       flash[:notice] = "ユーザー情報を編集しました"
       redirect_to("/users/#{@user.id}")
@@ -43,11 +43,15 @@ class UsersController < ApplicationController
     end
   end
   
+  
+  #削除機能はいずれパスワードを入力してポップアップウィンドウでアテンションする。
+  #とりあえず今は作業様で削除ボタン設置
+  
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
     flash[:notice] = "ユーザーアカウントを削除しました"
-    redirect_to("/home")
+    redirect_to("/")
   end
   
   
