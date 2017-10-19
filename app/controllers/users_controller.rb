@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(
       name: params[:name],
-      email: params[:email]
+      email: params[:email],
       password: params[:password]
       )
     if @user.save
@@ -43,6 +43,17 @@ class UsersController < ApplicationController
       render("users/edit")
     end
   end
+  
+  def login_form
+  end
+  
+  def login
+    @user = User.find_by(email: params[:email],
+                          password: params[:password])
+    flash[:notice] = "ログインに成功しました"
+    redirect_to("/users/index")
+  end
+  
   
   
   #削除機能はいずれパスワードを入力してポップアップウィンドウでアテンションする。
