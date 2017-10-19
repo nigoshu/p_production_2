@@ -21,8 +21,9 @@ class UsersController < ApplicationController
       password: params[:password]
       )
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "登録が完了しました"
-    redirect_to("/users/#{@user.id}")
+      redirect_to("/users/#{@user.id}")
     else
       render("/new")
     end
@@ -50,10 +51,23 @@ class UsersController < ApplicationController
   def login
     @user = User.find_by(email: params[:email],
                           password: params[:password])
+    if @user
+    session[:user_id] = @user.id
     flash[:notice] = "ログインに成功しました"
     redirect_to("/users/index")
+    else
+      @error_message = "ログインに失敗しました"
+      @email = params[:email]
+      @password = params[:password]
+      render("users/login_form")
+    end
   end
   
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "ログアウトしました"
+    redirect_to("/login")
+  end
   
   
   #削除機能はいずれパスワードを入力してポップアップウィンドウでアテンションする。

@@ -7,39 +7,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
-      <ul class="header-menus">
-        <li>
-            <%= link_to("top", "/") %>
-         </li>
-         <li>
-            <%= link_to("マイページ", "/users/show/#{params[:id]}") %>
-         </li>
-         <li>
-            <%= link_to("新規登録", "/users/new") %>
-         </li>
-          <li>
-            <%= link_to("ログイン", "/login") %>
-         </li>
-          <li>
-            <%= link_to("ユーザー一覧", "/users/index") %>
-         </li>
-         <li>
-            <%= link_to("新規投稿", "/posts/new") %>
-         </li>
-         <li>
-            <%= link_to("投稿一覧", "/posts/index") %>
-         </li>
-      </ul>
-    </header>
-    
+    <%= render 'layouts/header'%>
+      <div class="container">
      　<% if flash[:notice] %>
        <div class="flash">
          <%= flash[:notice] %>
        </div>
      <% end %>
-
     <%= yield %>
-      　</div>
+    </div>
+        <%= render "layouts/footer" %>
   </body>
 </html>
