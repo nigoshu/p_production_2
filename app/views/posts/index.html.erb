@@ -1,4 +1,4 @@
-<div class="main">
+
 <h1>投稿一覧だお</h1>
 
 <section class="card">
@@ -7,8 +7,9 @@
         <div class="card-text">
             <% @posts.each do |post| %>
         </div>
+        <div class="userIndex">
                 <%= link_to(post.content, "/posts/#{post.id}") %>
             <% end %>
+        </div>
     </div>
 </section>
-</div>
