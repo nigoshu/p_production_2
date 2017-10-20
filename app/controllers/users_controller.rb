@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   #現在showアクションはTOPページのリンクからジャンプするとユーザーIDを拾えないのでエラーになります。
 
   def index
-   @users = User.all
+   @users = User.all.order(created_at: :desc)
   end
 
   def show

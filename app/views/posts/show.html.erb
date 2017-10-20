@@ -2,8 +2,11 @@
     
 <h1>投稿の詳細ページだお</h1>
     <div class="posts-show-item">
+        <h2>
+          <%= @post.title %>
+        </h2>
         <p>
-        <%= @post.content %>
+          <%= @post.content %>
         </p>
         <div class="post-time">
             <%= @post.created_at %>

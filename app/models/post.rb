@@ -1,4 +1,9 @@
 class Post < ApplicationRecord
     validates :content, {presence: true}
-    #実験中 validates :user_id, {presence: true}
+    validates :user_id, {presence: true}  #←投稿とユーザーを紐付けするためバリデート
+    
+    def user
+        return User.find_by(id: self.user_id)
+    end
+    
 end
