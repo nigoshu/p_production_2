@@ -198,12 +198,12 @@ users/showに関する記述
 ***********************/
 
 
-.main-mypage{
-  width:500px;
-  padding:30px;
-  border:solid 1px #eee;
+.main-mypage {
+  width: 500px;
+  padding: 30px;
+  border : solid 1px #eee;
   display: inline-block;
-  text-align:center;
+  text-align: center;
 }
 
 .form-content{

@@ -12,10 +12,6 @@ class PostsController < ApplicationController
   
   
   def create
-<<<<<<< HEAD
-    @post = Post.new(content: params[:content], title: params[:title])
-    @post.save
-=======
     @post = Post.new(
       content: params[:content],
       title: params[:title],
@@ -28,8 +24,6 @@ class PostsController < ApplicationController
     else
       render("posts/new")
     end
->>>>>>> user_works
-    
   end
   
   
