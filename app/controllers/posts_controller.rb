@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   
   
   def create
+
     @post = Post.new(
       content: params[:content],
       title: params[:title],
@@ -24,6 +25,7 @@ class PostsController < ApplicationController
     else
       render("posts/new")
     end
+
     
   end
   
