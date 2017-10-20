@@ -1,14 +1,14 @@
-<div class="main">
-    
+
 <h1>新規投稿の作成画面だお</h1>
 
 <%= form_tag("/posts/create") do %>
-    <div class="form">
-        <div class="form-body">
+    <div class="posts-content">
+        <div class="align-left">
+            <p>タイトル</p>
+            <input name="title">
             <textarea name="content"></textarea>
             <input type="submit" value="投稿">
         </div>
     </div>
 <% end %>
 
-</div>

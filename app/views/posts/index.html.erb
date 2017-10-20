@@ -3,11 +3,12 @@
 
 <section class="card">
     <div class="card-content">
-    <h2 class="card-title">投稿のタイトル</h2>
-        <div class="card-text">
-            <% @posts.each do |post| %>
-        </div>
-                <%= link_to(post.content, "/posts/#{post.id}") %>
+        <% @posts.each do |post| %>
+            <h2><%= link_to(post.title, "/posts/#{post.id}") %></h2>
+            <div class="card-text">
+            <%= link_to(post.content, "/posts/#{post.id}") %>
+            </div>
+                
             <% end %>
     </div>
 </section>
