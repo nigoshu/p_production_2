@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171020063808) do
-=======
-ActiveRecord::Schema.define(version: 20171019063632) do
->>>>>>> f0a36a237fe2ec31efa90a0158750fad96a2cdbd
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
