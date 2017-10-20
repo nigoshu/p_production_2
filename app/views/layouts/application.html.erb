@@ -5,7 +5,23 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <!-- 
+ テキストエリアの改行情報を保持するjquery。機能しない　 
+ 
+  <script type="text/javascript">
+  $("textarea").change( function() {
+ var txtVal = $(this).val();
+ txtVal = txtVal.replace(/\r\n/g, "&lt;br /&gt;<br />");
+ txtVal = txtVal.replace(/(\n|\r)/g, "&lt;br /&gt;<br />");
+ $('#testpre').html('<p>'+ txtVal +'</p>');
+});
+ </script>　
+ 
+ -->
   </head>
+  
   <body>
     <%= render 'layouts/header'%>
       <div class="container">

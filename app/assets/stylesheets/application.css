@@ -332,7 +332,12 @@ users/showに関する記述
   color: #777;
   font-size: 14px;
   line-height: 1.5;
+  overflow: hidden;
+  height: auto;
+  max-height: 80px;
+  
 }
+
 .card-link {
   text-align: center;
   border-top: 1px solid #eee;
@@ -355,6 +360,8 @@ users/showに関する記述
 
 .posts-show-item {
   padding: 30px;
+  margin:0 auto;
+  width:65%;
   background-color: white;
   box-shadow: 0 2px 6px #c1ced7;
   overflow: hidden;
