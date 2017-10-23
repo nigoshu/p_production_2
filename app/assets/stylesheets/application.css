@@ -389,3 +389,12 @@ users/showに関する記述
 }
 
 
+.like-btn-unlike {
+    color: #ff2581;
+}
+
+.non-space{
+  padding:0;
+}
+
+

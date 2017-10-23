@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root "home#top"
   
+  post "likes/:post_id/create" => "likes#create"
+  post "likes/:post_id/destroy" => "likes#destroy"
+
+
   get "users/:id/edit" => "users#edit"
   post "users/:id/update" => "users#update"
   get "users/:id/destroy" => "users#destroy"  
@@ -20,6 +24,7 @@ Rails.application.routes.draw do
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
+  
 
   
 
