@@ -1,5 +1,6 @@
 
 <h1>投稿の詳細ページだお</h1>
+<<<<<<< HEAD
 <div class="posts-show-item">
     <h2>
       <%= @post.title %>
@@ -9,12 +10,37 @@
     </p>
     <div class="post-time">
         <%= @post.created_at %>
+=======
+
+    <div class="posts-show-item">
+        
+        <h2><%= @post.title %></h2>
+        <% if Like.find_by(user_id: @current_user.id, post_id: @post.id)%>
+                <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+              　<span class="fa fa-heart like-btn-unlike"></span>
+            　　<% end %>
+            <% else %>
+                <%= link_to("/likes/#{@post.id}/create",{method: "post"}) do %>
+              　<span class="fa fa-heart like-btn">?</span>
+            　　<% end %>
+            <% end %>
+            <%= @likes_count%>
+        <p>
+        <%= @post.content %>
+        </p>
+        <div class="post-time">
+            <%= @post.created_at %>
+        </div>
+        
+        <div class="post-menus">
+            
+            <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+            <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+            
+
+            <!-- ツイートボタン -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+>>>>>>> 296268f153896264cef8a6768256e52c55d3bee0
     </div>
-    
-    <div class="post-menus">
-        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
-        <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
-        <!-- ツイートボタン -->
-        <a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    </div>
-</div>
+

@@ -181,9 +181,6 @@ input[type="submit"]{
 
 }
 
-<<<<<<< HEAD
-=======
-
 
 
 
@@ -276,11 +273,17 @@ users/showに関する記述
 ************************************
 ************************************/
 
+.title-textarea{
+  height: 1em ;
+}
+
 
 .form {
   width: 1000px;
   box-shadow: 0 2px 6px #c1ced7;
   display: inline-block;
+  margin-bottom:30px;
+
 }
 
 .form-body {
@@ -289,10 +292,21 @@ users/showに関する記述
 
 .form textarea {
   width: 100%;
-  min-height: 110px;
   font-size: 16px;
   letter-spacing: 2px;
 }
+
+
+.textarea-title  {
+  height: 35px;
+  font-size:40px;
+}
+
+ .textarea-content  {
+  height: 120px;
+}
+
+
 
 /* posts/index ---------------- */
 
@@ -375,4 +389,12 @@ users/showに関する記述
 }
 
 
->>>>>>> f0a36a237fe2ec31efa90a0158750fad96a2cdbd
+.like-btn-unlike {
+    color: #ff2581;
+}
+
+.non-space{
+  padding:0;
+}
+
+
