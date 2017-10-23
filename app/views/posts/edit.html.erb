@@ -3,8 +3,8 @@
     <div class="form">
         <div class="form-body">
             <%= form_tag("/posts/#{@post.id}/update") do %>
-                <input name="title" value="<%= @post.title %>">
-                <textarea name="content"><%= @post.content %></textarea>
+                <textarea name="title" class="textarea-title"value="<%= @post.title %>"></textarea>
+                <textarea name="content" class="textarea-content"><%= @post.content %></textarea>
                 <input type="submit" value="保存">
             <% end %>
         </div>
