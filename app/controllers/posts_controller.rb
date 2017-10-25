@@ -71,4 +71,8 @@ class PostsController < ApplicationController
     end
   end
   
+  #拡散機能を模索中
+  def diffusion
+  end
+  
 end
