@@ -14,8 +14,9 @@
             　　<% end %>
             <% end %>
             <%= @likes_count%>
+            
         <p>
-        <%= @post.content %>
+        <%= simple_format(@post.content) %>
         </p>
         <div class="post-time">
             <%= @post.created_at %>

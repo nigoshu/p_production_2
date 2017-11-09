@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     before_action :authenticate_user
-    before_action :ensure_correct_user, {only:[:edit, :update, :destroy]}
+    before_action :ensure_correct_user, {only:[ :destroy]}
 
 
   
@@ -47,7 +47,7 @@ class PostsController < ApplicationController
     if @post.save
     flash[:notice] = "投稿を編集しました"
            #とりあえず現状はindexへリダイレクト
-    redirect_to("/posts/index")  
+    redirect_to("/posts/  def ensure_correct_userindex")  
     else
       render("posts/edit")
     end
