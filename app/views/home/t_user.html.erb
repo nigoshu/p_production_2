@@ -1,0 +1,36 @@
+<h1>User List</h1>
+
+
+  <% @tweetSp.each do |tweetSp| %>
+  <br>
+  <%= tweetSp.id %><br>
+  <%= tweetSp.retweet_count %>回リツイートされました<br>
+  <%= tweetSp.text %><br>
+  @<%= tweetSp.user.screen_name %><br>
+    <%= tweetSp.retweeted %><br>
+
+  
+  <br>
+  <hr>
+  
+
+
+<% end %>
+
+
+
+  <% @tweetShow.each do |show| %>
+  <br>
+  <%= show.id %><br>
+  <%= show.retweet_count %>回リツイートされました<br>
+  <%= show.text %><br>
+  @<%= show.user.screen_name %><br>
+    <%= show.retweeted %><br>
+
+  
+  <br>
+  <hr>
+  
+
+
+<% end %>

@@ -398,3 +398,45 @@ users/showに関する記述
 }
 
 
+/**************************
+
+TimeLine
+
+***************************/
+
+/*timeline*/
+
+.post-panel {
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 20px;
+}
+.post {
+  padding-left: 65px;
+
+}
+.tweet-image{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float: left;
+  
+}
+.tweet-image img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+  }
+
+
+.post-image img {
+    max-height: 250px;
+    max-width: 300px;
+  }
+
+.login-section{
+  float: right;
+  margin-right: 15px;
+}
+
+.textLeft{
+  text-align:left!important; 
+  background-color: #eee;
+}

@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   
   post "likes/:post_id/create" => "likes#create"
   post "likes/:post_id/destroy" => "likes#destroy"
+  
+  get "home/top" => "home#top"
+  get "t_user" => "home#t_user"
+  post "t_user" => "home#t_user"
 
   get "users/:id/edit" => "users#edit"
   post "users/:id/update" => "users#update"
