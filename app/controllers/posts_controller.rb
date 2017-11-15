@@ -98,7 +98,7 @@ class PostsController < ApplicationController
             
             #デポジットをセーブする記述はこれで良い？
             
-            @user = User.find_by(id: params[:id])
+            @user = User.find_by(id: session[:user_id])
             @user.user_charge = @user.user_charge + 100
             @post.content_charge = @post.content_charge - 100
             
