@@ -10,23 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171115063747) do
-=======
-=======
-ActiveRecord::Schema.define(version: 20171115063747) do
->>>>>>> d00a93a1366d98ff63957c4ae5eaf40a481fd25e
-ActiveRecord::Schema.define(version: 20171107105334) do
 
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-<<<<<<< HEAD
->>>>>>> 6d1fe3b60cdec8ea05817417cf7cb3b85ccf9ead
-=======
->>>>>>> d00a93a1366d98ff63957c4ae5eaf40a481fd25e
 
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"

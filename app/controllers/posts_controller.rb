@@ -98,14 +98,14 @@ class PostsController < ApplicationController
             
             #デポジットをセーブする記述はこれで良い？
             
-            #@user = User.find_by(id: params[:id])
-            #@user.depo = @user.depo + 100
-            #@user.save
-            
-            #@post.depo = @user.depo - 100
-            #@post.save
+            @user = User.find_by(id: params[:id])
+            @user.user_charge = @user.user_charge + 100
+            @post.content_charge = @post.content_charge - 100
             
             flash[:notice] = "100円ゲットん！！"
+            
+            @post.save
+            @user.save
           break
           
           else
