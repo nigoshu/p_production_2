@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20171115063747) do
 ActiveRecord::Schema.define(version: 20171107105334) do
 
   create_table "homes", force: :cascade do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20171107105334) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.string "title"
+    t.integer "content_charge", default: 0
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 20171107105334) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password"
+    t.integer "user_charge", default: 0
   end
 
 end

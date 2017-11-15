@@ -71,8 +71,50 @@ class PostsController < ApplicationController
     end
   end
   
-  #拡散機能を模索中
-  def diffusion
+  #シェア完了機能模索中
+  
+  def share
+    require 'twitter'
+    
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key = "hXhSpI3iRxzWh6XIB0osPhLT4"
+      config.consumer_secret = "weuWl4LyFVuf10sWoLCRTJZynsYH2p7QTwEZ9sDohEcNyldvoT"
+      config.access_token = "838731011865235456-na2d2yEiPUnRFfU6f3jo9QEr0maMWD0"
+      config.access_token_secret = "9rr3sxGGs2dS8C1jV8XDPGiaXv45ywOv11I8Q9h0IAfmQ"
+    end
+    
+    #データベースを作ったらparamsで引っ張ってくる。
+    @timeline = client.user_timeline(@current_user.name)
+    
+    @post = Post.find_by(id: params[:id])
+    @share_url = "https://ta215-production2.herokuapp.com/"
+    
+    #シェア判定機能
+    
+    @timeline.each do |tweet|
+      if tweet.urls?
+        tweet.urls.each do |url| 
+          if url.expanded_url.to_s == @share_url
+            
+            #デポジットをセーブする記述はこれで良い？
+            
+            #@user = User.find_by(id: params[:id])
+            #@user.depo = @user.depo + 100
+            #@user.save
+            
+            #@post.depo = @user.depo - 100
+            #@post.save
+            
+            flash[:notice] = "100円ゲットん！！"
+          break
+          
+          else
+            flash[:notice] = "シェアされてないよ！！"
+          end
+        end 
+      end 
+    end 
+    
   end
   
 end
