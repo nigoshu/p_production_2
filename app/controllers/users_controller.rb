@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       flash[:notice] = "登録が完了しました"
       redirect_to("/users/#{@user.id}")
     else
-      render("/new")
+      render("users/new")
     end
   end
   
@@ -73,6 +73,8 @@ class UsersController < ApplicationController
   end
   
   
+  
+  
   #削除機能はいずれパスワードを入力してポップアップウィンドウでアテンションする。
   #とりあえず今は作業様で削除ボタン設置
   
@@ -81,6 +83,11 @@ class UsersController < ApplicationController
     @user.destroy
     flash[:notice] = "ユーザーアカウントを削除しました"
     redirect_to("/")
+  end
+  
+  def likes
+    @user = User.find_by(id: params[:id])
+    @like = Like.where(user_id: @user.id)
   end
   
 end

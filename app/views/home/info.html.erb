@@ -1,2 +1,10 @@
-<h1>information</h1>
-<p>お問い合わせはこちらから</p>
+<h1>Serch List</h1>
+
+    <%= @tweet.each do |tweet| %>
+    <div class="tweetBox">
+      <h3>tweet</h3>
+      <p><%= tweet.text %></p>
+    <% end %>
+    </div>
+    
+
