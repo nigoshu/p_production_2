@@ -74,9 +74,13 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
     hashie (3.5.6)
 =======
 >>>>>>> 6d1fe3b60cdec8ea05817417cf7cb3b85ccf9ead
+=======
+    hashie (3.5.6)
+>>>>>>> d00a93a1366d98ff63957c4ae5eaf40a481fd25e
     http (2.2.2)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -116,6 +120,9 @@ GEM
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d00a93a1366d98ff63957c4ae5eaf40a481fd25e
     oauth (0.5.3)
     omniauth (1.7.1)
       hashie (>= 3.4.6, < 3.6.0)
@@ -126,9 +133,13 @@ GEM
     omniauth-twitter (1.4.0)
       omniauth-oauth (~> 1.1)
       rack
+<<<<<<< HEAD
 =======
     pg (0.21.0)
 >>>>>>> 6d1fe3b60cdec8ea05817417cf7cb3b85ccf9ead
+=======
+    pg (0.21.0)
+>>>>>>> d00a93a1366d98ff63957c4ae5eaf40a481fd25e
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
@@ -230,11 +241,17 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
 <<<<<<< HEAD
+<<<<<<< HEAD
   oauth
   omniauth-twitter
 =======
   pg
 >>>>>>> 6d1fe3b60cdec8ea05817417cf7cb3b85ccf9ead
+=======
+  oauth
+  omniauth-twitter
+  pg
+>>>>>>> d00a93a1366d98ff63957c4ae5eaf40a481fd25e
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
