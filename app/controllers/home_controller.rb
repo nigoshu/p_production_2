@@ -44,6 +44,10 @@ class HomeController < ApplicationController
         
         
   end
+<<<<<<< HEAD
   
+=======
+    
+>>>>>>> origin/master
 end
 

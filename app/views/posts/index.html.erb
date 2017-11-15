@@ -1,15 +1,15 @@
 <h1>投稿一覧だお</h1>
-<div class="align-left">
-    <% @posts.each do |post| %>
-        <section class="card">
-            <div class="card-content">
-                <h2 class="card-title">
-                    <%= link_to(post.title, "/posts/#{post.id}") %>
-                </h2>
-                <div class="card-text">
-                    <%= link_to(post.content, "/posts/#{post.id}") %>
-                </div>
+
+<section class="card">
+    <div class="card-content">
+        <% @posts.each do |post| %>
+        <h2 class="card-title"><%= link_to(post.title, "/posts/#{post.id}") %></h2>
+            <div class="card-text">
+            
+            <div class="userIndex">
+                <%= link_to(post.content, "/posts/#{post.id}") %>
             </div>
-        </section>
-    <% end %>
-</div>
+            </div>
+        <% end %>
+    </div>
+</section>
