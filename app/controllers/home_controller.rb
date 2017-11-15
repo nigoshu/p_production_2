@@ -32,8 +32,6 @@ class HomeController < ApplicationController
         
         #ここでは本来は自分のTwitterユーザーネームを代入させる
         @twitter_screenName = "@englishzeroone"
-
-       
         @mytweets = client.user_timeline(@twitter_screenName)
         @mytweets.each do |mytweet|
         @tweet = mytweet.text == @share_url
@@ -43,11 +41,8 @@ class HomeController < ApplicationController
         
         
         
-  end
-<<<<<<< HEAD
   
-=======
-    
->>>>>>> origin/master
+  end
+        
 end
 
