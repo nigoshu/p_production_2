@@ -1,25 +1,36 @@
 <h1>User List</h1>
 
-<div class="col-xs-9 col-xs-offset-3">
 
-  <% @tweets.each do |tweet| %>
-    <div class="post-panel well well-sm">
-      <div class="tweet-image">
-        <%= link_to image_tag(tweet.user.profile_image_url_https) %>
-      </div>
-      <div class="post">
-        <%= tweet.user.name %> @<%= tweet.user.screen_name %><br />
-        <%= tweet.text %><br />
-        RT <%= tweet.retweet_count %> いいね <%= tweet.favorite_count %><br />
-        <%= tweet.created_at %><br />
-        <div class="post-image">
-          <% if tweet.media? %>
-            <% tweet.media.each do |media| %>
-              <%= image_tag(media.media_url_https) %>
-            <% end %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-  </div>
+  <% @tweetSp.each do |tweetSp| %>
+  <br>
+  <%= tweetSp.id %><br>
+  <%= tweetSp.retweet_count %>回リツイートされました<br>
+  <%= tweetSp.text %><br>
+  @<%= tweetSp.user.screen_name %><br>
+    <%= tweetSp.retweeted %><br>
+
+  
+  <br>
+  <hr>
+  
+
+
+<% end %>
+
+
+
+  <% @tweetShow.each do |show| %>
+  <br>
+  <%= show.id %><br>
+  <%= show.retweet_count %>回リツイートされました<br>
+  <%= show.text %><br>
+  @<%= show.user.screen_name %><br>
+    <%= show.retweeted %><br>
+
+  
+  <br>
+  <hr>
+  
+
+
+<% end %>

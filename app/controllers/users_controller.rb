@@ -73,7 +73,6 @@ class UsersController < ApplicationController
   end
   
   
-
   
   
   #削除機能はいずれパスワードを入力してポップアップウィンドウでアテンションする。

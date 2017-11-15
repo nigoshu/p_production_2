@@ -23,8 +23,27 @@ class HomeController < ApplicationController
     
     #下記コードで自分のタイムラインに関するフォロワー情報などを@tweetsに格納する
     #(include_entities: true)によってTweet内の画像URLも取得することができる。無くても稼働自体はする。
-        @tweets = client.home_timeline(include_entities: true)
+    #タイムライン自体はt_user.html.erbに記載
+        
+        # https://twitter.com/nanaonanaon/status/930346259176554496 のエンゲージメントを測定したい
+
+
+        @share_url = "https://new-app-ta2aikawa.c9users.io/posts/#{@post.id}"
+        
+        #ここでは本来は自分のTwitterユーザーネームを代入させる
+        @twitter_screenName = "@englishzeroone"
+
+       
+        @mytweets = client.user_timeline(@twitter_screenName)
+        @mytweets.each do |mytweet|
+        @tweet = mytweet.text == @share_url
+        
+        end
+        
+        
         
         
   end
+  
 end
+
