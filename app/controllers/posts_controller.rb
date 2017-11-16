@@ -93,25 +93,29 @@ class PostsController < ApplicationController
     
     @timeline.each do |tweet|
       if tweet.urls?
+        
         tweet.urls.each do |url| 
-          if url.expanded_url.to_s == @share_url
+          if url.expanded_url.to_s == @share_url 
             
-            #デポジットをセーブする記述はこれで良い？
+            if @post.content_charge > 0
+              
+              @user = User.find_by(id: session[:user_id])
+              @user.user_charge = @user.user_charge + 100
+              @post.content_charge = @post.content_charge - 100
             
-            @user = User.find_by(id: session[:user_id])
-            @user.user_charge = @user.user_charge + 100
-            @post.content_charge = @post.content_charge - 100
+              flash[:notice] = "100円ゲットん！！"
+              @post.save
+              @user.save
+            break
             
-            flash[:notice] = "100円ゲットん！！"
+            else
+            flash[:notice] = "チャージが無くなりました!!"
+            end
             
-            @post.save
-            @user.save
-          break
-          
           else
             flash[:notice] = "シェアされてないよ！！"
           end
-        end 
+        end
       end 
     end 
     

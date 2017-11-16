@@ -85,18 +85,10 @@ class UsersController < ApplicationController
     redirect_to("/")
   end
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d00a93a1366d98ff63957c4ae5eaf40a481fd25e
+
   def likes
     @user = User.find_by(id: params[:id])
     @like = Like.where(user_id: @user.id)
   end
-  
-<<<<<<< HEAD
->>>>>>> 6d1fe3b60cdec8ea05817417cf7cb3b85ccf9ead
-=======
->>>>>>> d00a93a1366d98ff63957c4ae5eaf40a481fd25e
+
 end
