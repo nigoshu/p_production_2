@@ -89,36 +89,43 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @share_url = "https://ta215-production2.herokuapp.com/"
     
-    #シェア判定機能
+    #すでにシェアされているかの判定
+    if Share.find_by(user_id: @current_user.id, post_id: @post.id)
+      flash[:notice] = "すでにシェアされているよ！"
+      return
+    end
     
-    @timeline.each do |tweet|
-      if tweet.urls?
+    #シェア判定機能
+      @timeline.each do |tweet|
+        if tweet.urls?
         
-        tweet.urls.each do |url| 
-          if url.expanded_url.to_s == @share_url 
+          tweet.urls.each do |url| 
+            if url.expanded_url.to_s == @share_url 
             
-            if @post.content_charge > 0
+              if @post.content_charge > 0
               
-              @user = User.find_by(id: session[:user_id])
-              @user.user_charge = @user.user_charge + 100
-              @post.content_charge = @post.content_charge - 100
+                @user = User.find_by(id: session[:user_id])
+                @user.user_charge = @user.user_charge + 100
+                @post.content_charge = @post.content_charge - 100
             
-              flash[:notice] = "100円ゲットん！！"
-              @post.save
-              @user.save
-            break
+                flash[:notice] = "100円ゲットん！！"
+                @post.save
+                @user.save
+              
+                @share = Share.new(user_id: @current_user.id, post_id: @post.id)
+                @share.save
+              break
+            
+              else
+              flash[:notice] = "チャージが無くなりました!!"
+              end
             
             else
-            flash[:notice] = "チャージが無くなりました!!"
+              flash[:notice] = "シェアされてないよ！！"
             end
-            
-          else
-            flash[:notice] = "シェアされてないよ！！"
           end
-        end
+        end 
       end 
-    end 
-    
   end
   
 end
