@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post "users/create" => "users#create"
   get "users/new" => "users#new" 
   get "users/:id" => "users#show"
+ 
 
   post "login" => "users#login"
   get "login" => "users#login_form"
@@ -28,8 +29,8 @@ Rails.application.routes.draw do
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
-
-  get "posts/:id/diffusion" => "posts#diffusion"
+  
+  get "posts/:id/share" => "posts#share"
   
   # For de/tails on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

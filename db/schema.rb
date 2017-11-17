@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171116103035) do
+=======
+ActiveRecord::Schema.define(version: 20171115063747) do
+>>>>>>> origin/master
 
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,6 +34,7 @@ ActiveRecord::Schema.define(version: 20171116103035) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.string "title"
+    t.integer "content_charge", default: 0
   end
 
   create_table "tweets", force: :cascade do |t|
@@ -47,6 +52,7 @@ ActiveRecord::Schema.define(version: 20171116103035) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password"
+    t.integer "user_charge", default: 0
   end
 
 end
