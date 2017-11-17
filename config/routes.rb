@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  root "home#top"
+  
+  root "tweets#top"
   
   post "likes/:post_id/create" => "likes#create"
   post "likes/:post_id/destroy" => "likes#destroy"
   
-  get "home/top" => "home#top"
-  get "t_user" => "home#t_user"
-  post "t_user" => "home#t_user"
+  get "tweets/top" => "tweets#top"
+  get "t_user" => "tweets#t_user"
+  post "t_user" => "tweets#t_user"
 
   get "users/:id/edit" => "users#edit"
   post "users/:id/update" => "users#update"

@@ -1,0 +1,74 @@
+<h1>User List</h1>
+
+  【セクション１】<br>
+
+  ①url_string ：<%= @url_box %><br>
+  ②share_url：<%=  @share_url %><br>
+　③mytweets ：<%=  @mytweets %><br>
+  ④true_url：<%=  @true_url%><br>
+
+
+<hr>
+  【セクション２】<br>
+
+  ⑤<%= @mytweet_id %><br>
+  ⑥<%= @mytweet_name %><br>
+  ⑦<%= @mytweet_screen_name %><br>
+<hr>
+【セクション3】<br>
+
+ <%= @timelines.each do |tweet| %>
+	       <% if tweet.urls? %>
+	       <%= tweet.urls %>br>
+	       
+	       <% end %>
+	<% end %>
+  ⑧<%= @share_id %><br>
+  ⑨<%= @share_name %><br>
+  ⑩@<%= @share_screen_name %><br>
+  ⑪<%=  @share_re_count %><br>
+  ⑫<%= 	@share_text %><br>
+  
+  <hr>
+【セクション4】<br>
+
+ 
+
+
+<hr>
+【セクション5】<br>
+ここに記載される<br>
+
+<%= @tweeting.tweet_id %><br>
+<%= @tweeting.twitter_name %><br>
+<%= @tweeting.twitter_screen_name %><br>
+<%= @tweeting.share_retcount %><br>
+
+しょうさいについて：<%= @tweeting%><br>
+<%
+=begin
+%>
+  ①@url_string ：<%= @url_strings %><br>
+  ④@true_url：<%=  @true_url%><br>
+
+ <%= @tweets.retweet_count %><br>
+  <%= @tweets.user.name %><br>
+  <%= @tweets.user.screen_name %><br>
+  <%= @true_url %><br>
+
+
+<%= @share_re_count %><br>
+<%= @share_text %><br>
+<%= @share_id  %><br>
+<%= @share_name %><br>
+<%= @share_screen_name%><br>
+
+
+<%
+=end
+%>
+
+<hr>
+<hr>
+
+
