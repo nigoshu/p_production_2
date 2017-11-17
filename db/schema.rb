@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20171116070834) do
-=======
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171116103035) do
-=======
-ActiveRecord::Schema.define(version: 20171115063747) do
->>>>>>> origin/master
->>>>>>> 52a3435be71661cb261f774475a91341d71c5fa0
 
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -41,17 +33,18 @@ ActiveRecord::Schema.define(version: 20171115063747) do
     t.integer "content_charge", default: 0
   end
 
-<<<<<<< HEAD
   create_table "shares", force: :cascade do |t|
     t.integer "user_id"
     t.integer "post_id"
-=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tweets", force: :cascade do |t|
     t.string "tweet_id"
     t.string "twitter_name"
     t.string "twitter_screen_name"
     t.integer "share_retcount"
->>>>>>> 52a3435be71661cb261f774475a91341d71c5fa0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
