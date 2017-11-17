@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116103035) do
+ActiveRecord::Schema.define(version: 20171117073719) do
 
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -45,6 +45,14 @@ ActiveRecord::Schema.define(version: 20171116103035) do
     t.string "twitter_name"
     t.string "twitter_screen_name"
     t.integer "share_retcount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "twitter_users", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
