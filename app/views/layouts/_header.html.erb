@@ -30,6 +30,9 @@
         <li>
             <%= link_to("検索", "/tweets/top") %>
         </li>
+        <li>
+            <%= link_to 'Twitterでログイン', '/auth/twitter' %>
+        </li>
         <% else %>
         <li>
             <%= link_to("ログイン", "/login") %>
@@ -37,9 +40,7 @@
         <li>
             <%= link_to("新規登録", "/users/new") %>
         </li>
-        <li>
-            <%= link_to 'Twitterでログイン', '/auth/twitter' %>
-        </li>
+        
         
          <% end %>
     </ul>

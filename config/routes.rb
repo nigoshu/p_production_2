@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get "users/new" => "users#new" 
   get "users/:id" => "users#show"
  
-  get "/auth/:provider/callback" => "sessions#create"
+  get "auth/:provider/callback" => "sessions#create"
   post "login" => "users#login"
   get "login" => "users#login_form"
   get "logout" => "users#logout"

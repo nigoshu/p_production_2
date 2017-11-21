@@ -15,28 +15,9 @@
   ⑥<%= @mytweet_name %><br>
   ⑦<%= @mytweet_screen_name %><br>
 <hr>
-【セクション3】<br>
-
- <%= @timelines.each do |tweet| %>
-	       <% if tweet.urls? %>
-	       <%= tweet.urls %>br>
-	       
-	       <% end %>
-	<% end %>
-  ⑧<%= @share_id %><br>
-  ⑨<%= @share_name %><br>
-  ⑩@<%= @share_screen_name %><br>
-  ⑪<%=  @share_re_count %><br>
-  ⑫<%= 	@share_text %><br>
-  
-  <hr>
-【セクション4】<br>
-
  
 
-
-<hr>
-【セクション5】<br>
+【セクション3】<br>
 ここに記載される<br>
 
 <%= @tweeting.tweet_id %><br>

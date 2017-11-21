@@ -30,12 +30,12 @@ class TweetsController < ApplicationController
         # https://twitter.com/nanaonanaon/status/930346259176554496 のエンゲージメントを測定したい
       
       @mytwitter_id = "@sakamobi "
-      @timelines = client.user_timeline("#{@mytwitter_id}")
+      @timelines = client.user_timeline("#{@mytwitter_id}",count: 200) #レートリミット200。カウント数を上げないと過去分を持ってこられない。
       	
       
 
         #@post = Post.find_by(id: params[:id])
-        @share_url = "https://sakamobi.com/news/nengajyo-noruma"
+        @share_url = "https://sakamobi.com/news/pteronura-brasiliensis"
     
         @timelines.each do |tweet|
 	        if tweet.urls?
@@ -43,11 +43,6 @@ class TweetsController < ApplicationController
              @mytweet_id = tweet.id
              @mytweet_name = tweet.user.name
              @mytweet_screen_name = tweet.user.screen_name
-             
-             
-            
-             
-	      	#予め@url_stringsを定義しておくためにnilを入れておく。
 
     	tweet.urls.each do |url|
         

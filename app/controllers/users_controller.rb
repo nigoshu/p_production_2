@@ -90,9 +90,5 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @like = Like.where(user_id: @user.id)
   end
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> fd01ee6a09f916a4ed07a74df1e0e48278ce0e20
 end
